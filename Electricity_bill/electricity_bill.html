@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="myInput" type="number">
+    <button onclick="billCalculate()">Calculate Bill</button>
+    <p id="demo"></p>
+    <script>
+
+        billCalculate = () => {
+            var bill;
+            var unit = document.getElementById("myInput").value;
+
+            if (unit <= 50) {
+                bill = unit * 3.50;
+                document.getElementById("demo").innerHTML = bill;
+            }
+            else if (unit > 50 && unit <= 150) {
+                bill = (unit - 50) * 4.00 + 50 * 3.50;
+                document.getElementById("demo").innerHTML = bill;
+            }
+            else if (unit > 150 && unit <= 250) {
+                bill = (unit - 150) * 5.20 + 50 * 3.50 + 100 * 4.00;
+                document.getElementById("demo").innerHTML = bill;
+            }
+            else {
+                bill = unit * 6.50 + 100 * 5.20 + 100 * 4.00 + 50 * 3.50;
+                document.getElementById("demo").innerHTML = bill;
+            }
+        }
+    </script>
+</body>
+
+</html>
