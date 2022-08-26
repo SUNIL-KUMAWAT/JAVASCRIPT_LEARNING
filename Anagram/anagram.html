@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let string1 = "aar";
+        let string2 = "rra";
+        let isAnagram = false;
+        let string1Length = string1.length;
+        let string2Length = string2.length;
+        if (string1Length == string2Length) {
+            for (let i = 0; i < string1Length; i++) {
+                isAnagram = false;
+                for (let j = 0; j < string2Length; j++) {
+                    if (string1[i] == string2[j]) {
+                        isAnagram =true;
+                        break;
+                    }
+
+                }
+                if(!isAnagram)
+                break;
+                
+            }
+            
+        }
+       
+        document.write(isAnagram);
+    </script>
+</body>
+
+</html>
