@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let string = "sasadas";
+        let length = string.length - 1;
+        let start = 0;
+        let isPallindrom=true
+        console.log(string[0]);
+        while (length > 1) {
+            if (string[start] != string[length]) {
+                document.write("not palindrom");
+                break;
+            } else {
+               isPallindrom=true 
+            }
+            start++;
+            length--;
+        }            
+        if(isPallindrom){
+            document.write("palindrom")           
+        }
+    </script>
+</body>
+
+</html>
