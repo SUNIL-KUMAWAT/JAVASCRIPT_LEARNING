@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='container'></p>
+    <script>
+        var print = document.getElementById('container');
+        function getMembers(array, element) {
+            let ul = document.createElement('ul');
+            array.forEach(function (currentValue, index) {
+                let li = document.createElement('li');
+                li.innerHTML = currentValue.label;
+                ul.appendChild(li);
+                element.appendChild(ul);
+                if (currentValue.children) {
+                    getMembers(currentValue.children, li);
+                }
+            });
+            // el.appendChild(ul);
+        }
+
+        var members = [
+            {
+                label: 'label1'
+            },
+            {
+                label: 'label2',
+                children: [
+                    {
+                        label: 'label21' 
+                    }, {
+                        label: 'label22',
+                        children: [
+                            {
+                                label: 'Lebel221' ,
+                            }
+                        ] 
+                    }
+                ]
+            },
+            {
+                label:'label3',
+                children: [
+                    {
+                        label: 'label101'
+                    }
+                ]
+            }
+        ];
+        getMembers(members, print);       
+    </script>
+</body>
+
+</html>
