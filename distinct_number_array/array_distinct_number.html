@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            let count = 0;
+            let distinctArray = [];
+            let array = [1,6,9,9,1,20,250,6,40,40,100]; 
+
+            distinctArrayElement = (array) => {
+                for (let i = 0; i < array.length; i++) {
+                    for (let j = i + 1; j < array.length; j++) {
+                        if (array[i] == array[j]) 
+                            count += 1                        
+                    }
+                    if (count < 1) {
+                        distinctArray.push(array[i]);
+                    }
+                    let number = 0;
+                    count = number;
+                }
+                return distinctArray;
+            }
+            distinctArrayElement(array);
+            document.write(distinctArray);
+        </script>
+    </body>
+</html>

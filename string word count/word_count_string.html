@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let string = "The null character is to be used         to terminate string";
+            let wordcount = 0;
+            wordCount = (string) => {
+                if (string == null) {
+                    return 0;
+                } else {
+                    for (let i = 0; i < string.length; i++) {
+                        if (string[i] == " ") {
+                            wordcount += 1;
+                            if (string[i + 1] == " ") {
+                                wordcount -= 1;
+                            }
+                        }
+                    }
+                }
+            }
+            wordCount(string);
+            document.write(wordcount + 1);
+        </script>
+    </body>
+</html>
