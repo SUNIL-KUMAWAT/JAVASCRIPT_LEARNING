@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            // .....swap number using variable......
+            function swap() {
+                let a,
+                    b,
+                    temp;
+                a = Number(document.getElementById("number1").value);
+                b = Number(document.getElementById("number2").value);
+                // console.log(a);
+                temp = a;
+                a = b;
+                b = temp;
+                document.getElementById("number3").value = a;
+                document.getElementById("number4").value = b;
+            }
+
+            function swap1() {
+                let a,
+                    b;
+                a = Number(document.getElementById("number1").value);
+                b = Number(document.getElementById("number2").value);
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                document.getElementById("number5").value = a;
+                document.getElementById("number6").value = b;
+            }
+            function evenodd() {
+                let num;
+                // num = Number(document.getElementById("number").value);  //number as input
+                num = document.getElementById("number").value; // string as input
+                const value = parseInt(num);
+                console.log(value)
+                // console.log(isNaN(value));
+                if (isNaN(parseInt(num))) {
+                    document.getElementById('oe').innerHTML = "Please enter a valid number";
+                } else if (isNaN(parseFloat(num))) {
+                    document.getElementById('oe').innerHTML = "Please enter a valid(float) number";
+                } else if (num % 2 == 0) {
+                    document.getElementById('oe').innerHTML = " your number" + " " + num + " " + "is even";
+                } else {
+                    document.getElementById('oe').innerHTML = " your number" + " " + num + " " + "is odd";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <p>
+            <b>Swap numbers</b>
+        </p>
+        <label for="number1">Enter the First number :
+        </label>
+        <input type="none" id="number1">
+        <label for="number2">Enter the second number :
+        </label>
+        <input type="none" id="number2">
+        <br>
+        <br>
+        <button onclick="swap()">Swap Number using variable</button>
+        <br>
+        <br>
+        <label for="number1">After swap the First number :
+        </label>
+        <input type="none" id="number3">
+        <label for="number2">After swap the second number :
+        </label>
+        <input type="none" id="number4">
+        <br>
+        <br>
+        <button onclick="swap1()">Swap Number using arithmetic operators</button>
+        <br>
+        <br>
+        <label for="number1">After swap the First number :
+        </label>
+        <input type="none" id="number5">
+        <label for="number2">After swap the second number :
+        </label>
+        <input type="none" id="number6">
+        <br><br><br><hr><br><br>
+        <p>
+            <b>Check number is even or odd</b>
+        </p>
+        <label for="number">
+            Enter the number :
+        </label>
+        <input type="none" id="number" onkeyup="evenodd()"><span id="oe"></span>
+        <br>
+
+    </body>
+</html>

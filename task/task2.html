@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+
+            function CelsiusTOfahrenheit() {
+                let celsius = Number(document.getElementById("numbercelcius").value);
+                const fahrenheit = (celsius * 1.8) + 32
+                document.getElementById("result1").value = fahrenheit;
+            }
+
+            function largestnumber() {
+                let number1,
+                    number2,
+                    number3;
+
+                number1 = Number(document.getElementById("number1").value);
+                number2 = Number(document.getElementById("number2").value);
+                number3 = Number(document.getElementById("number3").value);
+
+                if (number1 >= number2 && number1 >= number3) 
+                    document.getElementById("result2").value = number1;
+                 else if (number2 >= number1 && number2 >= number3) 
+                    document.getElementById("result2").value = number2;
+                 else 
+                    document.getElementById("result2").value = number3;
+                
+
+                return 0;
+            }
+
+            function isprime() {
+                let n;
+                n = Number(document.getElementById("pnumber").value);
+                if (n <= 1) {
+                    document.getElementById("result3").value = "not prime";
+                    return;
+                }
+                $isNotPrime = false;
+                for (let i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        $isNotPrime = true;
+
+                        break;
+                    }
+                }
+                if ($isNotPrime) {
+                    document.getElementById("result3").value = "not prime";
+                    return;
+                }
+                // alert("not");
+                // document.write("not prime")
+                // return 1;
+                document.getElementById("result3").value = "prime";
+            }
+
+
+            function factorial() {
+                let temp = 1;
+                let fact = Number(document.getElementById("factorial").value);
+                for (i = 2; i <= fact; i ++) 
+                    temp *= i;
+                
+                document.getElementById("result4").value = temp;
+            }
+
+            function reverseString() {
+                let str = document.getElementById("text").value;
+                let newString = "";
+                for (let i = str.length - 1; i >= 0; i--) {
+                    newString += str[i];
+                    document.getElementById("result5").value = newString;
+                }
+                return newString;
+            }
+        </script>
+        <title>Document</title>
+
+    </head>
+
+    <body>
+        <p>
+            <b>temperator Celsius</b>
+        </p>
+        <label for="numbercelcius">Enter the temperator Celsius
+        </label>
+        <input type="none" id="numbercelcius">
+        <button onclick="CelsiusTOfahrenheit()">Fahrenheit</button>
+        <label for="result1">Result
+        </label>
+        <input type="none" id="result1">
+        <br>
+        <br>
+        <br>
+        <p>
+            <b>largest among three numbers</b>
+        </p>
+        <label for="number1">Enter the First number :
+        </label>
+        <input type="none" id="number1">
+        <label for="number2">Enter the second number :
+        </label>
+        <input type="none" id="number2">
+        <label for="number">Enter the third number :
+        </label>
+        <input type="none" id="number3">
+        <br>
+        <button onclick="largestnumber()">find largest number</button>
+        <label for="result2">Result
+        </label>
+        <input type="none" id="result2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>
+            <b>check prime or not</b>
+        </p>
+        <label for="prime">Enter number
+        </label>
+        <input type="none" id="pnumber">
+        <button onclick="isprime()">prime</button>
+        <label for="text">Result
+        </label>
+        <input type="text" id="result3">
+        <br>
+        <!-- <label for="num">Enter the number </label>
+            <input type="none" id="num">
+            <button onclick="isPrime()">find largest number</button>
+            <label for="result3">Result </label>
+            <input type="none" id="result3"> -->
+        <br>
+        <br>
+        <br>
+        <p>
+            <b>factorial number</b>
+        </p>
+        <label for="factorial">Enter number
+        </label>
+        <input type="none" id="factorial">
+        <button onclick="factorial()">factorial</button>
+        <label for="result4">Result
+        </label>
+        <input type="none" id="result4">
+        <br>
+        <br>
+        <br>
+        <p>
+            <b>reverse string</b>
+        </p>
+        <label for="text">Enter number
+        </label>
+        <input type="none" id="text">
+        <button onclick="reverseString()">ReverseString</button>
+        <label for="result5">Result
+        </label>
+        <input type="text" id="result5">
+    </body>
+</html>

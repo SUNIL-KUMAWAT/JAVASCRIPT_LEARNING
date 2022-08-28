@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image" href="/icon1.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .placeholdericon {
+      font-family: fontawesome;
+    }
+
+    .class1 {
+
+      margin-top: 10px;
+      font-size: 17px
+    }
+  </style>
+
+  <title>signup
+  </title>
+</head>
+
+
+</body>
+<form action="student_reference.html" method="get">
+
+  <div style="background-color: rgb(126, 231, 182);">
+    <h1 style="color: rgb(6, 25, 129);">Register Here</h1>
+    <p>Please fill in this form to create an account.</p>
+    <div class="class1">
+      <label for="User Name">
+        <b>Enter Your Name:</b>
+      </label>
+    </div>
+    <div class="class1">
+      <label for="User Name">
+        First Name
+      </label>
+      <input type="text" id="User Name" name="User Name" class="placeholdericon" placeholder="&#xf007; first Name"
+        required>
+      <label for="User Name">
+        Middle Name
+      </label>
+      <input type="text" id="User Name" name="User Name" class="placeholdericon" placeholder="&#xf007; middle Name">
+      <label for="User Name">
+        Last Name
+      </label>
+      <input type="text" id="User Name" name="User Name" class="placeholdericon" placeholder="&#xf007; last Name">
+
+    </div>
+
+    <div class="class1">
+      <label for="email">
+        <b>Email:</b>
+      </label>
+      <input type="text" id="email" name="email" class="placeholdericon" placeholder="&#xf0e0; abc@gmail.com" required>
+    </div>
+
+    <div class="class1">
+      <label for="age">
+        <b>Age:</b>
+      </label>
+      <input type="text" id="age" name="email" placeholder="Enter age">
+    </div>
+
+    <div class="class1">
+      <label for="Address">
+        <b>Address:</b>
+      </label>
+      <textarea id="Address" name="Address" cols="" rows=""></textarea>
+    </div>
+
+    <div class="class1">
+      <label for="Gender">
+        <b>Gender:</b>
+      </label>
+
+      <input type="radio" id="Gender" value="m" name="Gender">
+      <label for="male">male</label>
+      <input type="radio" id="Gender" value="f" name="Gender">
+      <label for="male">female</label>
+      <input type="radio" id="Gender" value="o" name="Gender">
+      <label for="male">other</label>
+
+    </div>
+
+    <div class="class1">
+      <label for="country">
+        <b>Country:</b>
+      </label>
+      <select id="country" name="country">
+        <option value="0">
+          Please select country</option>
+        <optgroup label="Asia">
+          <option value="India">India</option>
+          <option value="Pakisthan">Pakisthan</option>
+          <option value="Srilanka">Srilanka</option>
+          <option value="China">China</option>
+        </optgroup>
+        <option value="USA">USA</option>
+        <option value="UAE">UAE</option>
+        <option value="Othe">Other</option>
+      </select>
+    </div>
+
+    <div class="class1">
+      <label for="habbies"> <b>Hobbies:</b> </label>
+
+      <input type="checkbox" id="habbies" name="hobbies[]">
+      <label for="dancing">Dancing</label>
+      <input type="checkbox" id="habbies" name="hobbies[]">
+      <label for="singing">Singing</label>
+      <input type="checkbox" id="habbies" name="hobbies[]">
+      <label for="painting">Painting</label>
+    </div>
+
+    <div class="class1">
+      <label for="image"> <b>Image Upload:</b></label>
+      <input type="file" id="image" name="image">
+    </div>
+
+    <div class="class1">
+      <label for="date"><b>Date:</b></label>
+      <input type="date" id="date" name="date">
+    </div>
+
+    <div class="class1">
+      <label for="password">
+        <b>Password:</b>
+      </label>
+      <input type="password" id="password" name="password" class="placeholdericon" placeholder="&#xf023; Enter Password"
+        required>
+    </div>
+
+    <div class="class1">
+      <label for="password-repeat">
+        <b>Repeat Password:</b>
+      </label>
+      <input type="password" id="password-repeat" name="password-repeat" class="placeholdericon"
+        placeholder="&#xf023; Repeat Password" required>
+    </div>
+
+    <div class="class1">
+      <label for="login"> <b>login</b> </label>
+      <input type="submit" value="login" name="Submit" id="login" />
+      <label for="reset"> <b>Reset</b> </label>
+      <input type="reset" id="reset" name="reset">
+    </div>
+
+    <div class="class1">
+      <p>Already have an account?
+        <a href="loginpage.html">
+          <b>
+            Sign in
+          </b>
+        </a>
+      </p>
+    </div>
+    <!--</div>-->
+</form>
+</head>
+
+</html>
