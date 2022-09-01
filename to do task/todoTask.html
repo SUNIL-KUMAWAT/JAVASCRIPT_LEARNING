@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="todoTask.js">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="font-style: italic;">to-do task</h1>
+        <textarea name="textarea" id="teaxarea" cols="35" rows="15" textarea.value="" required></textarea>
+        <button id="taskbutton" onclick="tasks.add({description: teaxarea.value})">add task</button>
+        <button id="taskbutton1" onclick="tasks.deleteitem({description: teaxarea.value})">detete task</button>
+        <ul id="addli"></ul>
+        <p id="button"></p>
+    </body>
+    <script>
+
+        let newli = document.getElementById("addli");
+        let tasks = {
+            items: [],
+            add: function (task) {
+                this.items.push(task);
+                this.render();
+                console.log(this.items);
+            },
+            render: function () {
+                var li = '';
+                this.items.forEach(function (item) {
+                    li += `<li>${
+                        item.description
+                    }</li>`;
+                })
+                newli.innerHTML = li;
+            },
+            deleteitem: function (item) {
+                for (let i = 0; i < (this.items).length; i++) {
+                    if (JSON.stringify(this.items[i]) === JSON.stringify(item)) {
+                        this.items.splice(i, 1);
+                    }
+                }
+            }
+        };
+    </script>
+</html>
