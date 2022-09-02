@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="font-style: italic;">to-do task</h1>
+        <textarea name="cadidaye" id="textarea" cols="35" rows="5" textarea.value="" required></textarea>
+        <button id="taskbutton" onclick="tasks.add()">add task</button>
+        <button id="taskbutton1" onclick="tasks.deleteitem()">detete task</button>
+        <ul id="list"></ul>
+    </body>
+
+    <script>
+        let tasks = {
+            items: [],
+            add: function () {
+                var inputItem = document.getElementById("textarea");
+                this.items.push(inputItem);
+                this.render();
+            },
+            render: function () {
+                var inputItem = document.getElementById("textarea");
+                if (inputItem.value.trim() === '') {
+                    alert("you must write something");
+                    document.getElementById("textarea").value = "";
+                } else {
+                    var ul = document.getElementById("list");
+                    var li = document.createElement("li");
+                    li.setAttribute('id', inputItem.value.trim());
+                    li.appendChild(document.createTextNode(inputItem.value.trim()));
+                    ul.appendChild(li);
+                    var button = document.createElement("button"); // button not linked
+                    button.textContent = "delete"; // button not linked
+                    li.appendChild(button); // button not linked
+                    document.getElementById("textarea").value = "";
+                }
+            },
+            deleteitem: function (item) {
+                var ul = document.getElementById("list");
+                var inputItem = document.getElementById("textarea");
+                var item = document.getElementById(inputItem.value.trim());
+                ul.removeChild(item);
+                document.getElementById("textarea").value = "";
+            }
+        };
+    </script>
+</html>
