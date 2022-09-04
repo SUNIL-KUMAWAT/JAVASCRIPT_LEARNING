@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        rel="stylesheet" href="./todo.css">
+        <!-- <script src="./todo.js"></script> -->
+        <title>todoTask</title>
+    </head>
+
+    <body>
+        <h1 id="mainHeading" style="font-style: italic;">to-do task</h1>
+        <textarea name="teaxarea" id="name" cols="35" rows="5" class="input" textarea.value="" required></textarea>
+        <button type="button" value="add" id="btnClick" class="btn" onclick="tasks.add()">add</button>
+        <button onclick="tasks.sort()">Sort Asc</button>
+        <ul id="ul-main"></ul>
+    </body>
+    <script>
+
+        let tasks = {
+            items: [],
+            add: function (parentId) {
+                console.log(this.items)
+                var description = document.getElementById("name").value;
+                if (description == "") {
+                    alert("enter text");
+                    return;
+                }
+                let newItem = {
+                    id: Date.now(), // unique id - timestamp
+                    description: description
+                }
+                // if a child - li element
+                console.log({parentId})
+                if (parentId) {
+                    let parent = this.items.find(function (item) {
+                        return item.id == parentId;
+                    })
+                    if (parent.children) {
+                        parent.children.push(newItem);
+                    } else {
+                        parent['children'] = [newItem];
+                    }
+                } else {
+                    this.items.push(newItem);
+                }
+
+                this.render()
+            },
+            delete: function (childId, parentId) {
+                console.log('h', this.items);
+                if (parentId) {
+                    let parent = this.items.find(function (e) {
+                        return e.id == parentId;
+                    });
+                    parent.children = parent.children.filter(function (e) {
+                        return e.id != childId;
+                    })
+                } else {
+                    this.items = this.items.filter(function (e) {
+                        return e.id != childId
+                    });
+                }
+                this.render()
+            },
+
+            render: function () {
+                let ul = document.getElementById("ul-main");
+                ul.innerHTML = '';
+                this.items.forEach(element => {
+                    let li = document.createElement("li");
+                    li.textContent = element.description;
+                    li.setAttribute('id', element.id)
+                    ul.appendChild(li);
+                    let deleteButton = document.createElement("button");
+                    deleteButton.textContent = "delete";
+                    li.appendChild(deleteButton);
+                    deleteButton.onclick = function (event) {
+                        tasks.delete(element.id)
+                    }
+                    let addButton = document.createElement("button");
+                    addButton.textContent = "add subtask";
+                    li.appendChild(addButton);
+                    let currentContext = {
+                        ...this
+                    }; // spread syntax allows  where multiple arguments are expected
+                    addButton.addEventListener('click', function (e) {
+                        tasks.add(element.id)
+                    })
+                    if (element.children && element.children.length) {
+                        let ul = document.createElement("ul")
+                        li.appendChild(ul)
+                        element.children.forEach(child => {
+                            let li = document.createElement("li");
+                            li.textContent = child.description;
+                            ul.appendChild(li);
+                            let deleteButton = document.createElement("button");
+                            deleteButton.textContent = "delete";
+                            li.appendChild(deleteButton);
+                            deleteButton.onclick = function (event) {
+                                tasks.delete(child.id, element.id)
+                            }
+                        });
+                    }
+                });
+
+            },
+
+            sort: function (asc) {
+                this.tasks = this.items.forEach(function (item) {
+                    if (item.children) {
+                        item.children = asc ? item.children.sort(sortList) : item.children.sort(sortList);
+                    }
+                })
+
+                this.tasks = this.items.sort(sortList)
+                this.render()
+            }
+        };
+        function sortList(a, b) {
+            const name1 = a.description.toUpperCase();
+            const name2 = b.description.toUpperCase();
+            let comparison = 0;
+            if (name1 > name2) {
+                comparison = 1;
+            } else if (name1 < name2) {
+                comparison = -1;
+            }
+            return comparison;
+        }
+    </script>
+</html>
