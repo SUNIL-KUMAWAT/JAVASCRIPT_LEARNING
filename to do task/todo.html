@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./todo.css">
+        <script src="./todo.js"></script>
+        <title>todoTask</title>
+    </head>
+    
+    <body>
+        <h1 id="mainHeading" style="font-style: italic;">to-do task</h1>
+        <textarea name="teaxarea" id="name" cols="35" rows="5" class="input" textarea.value="" required></textarea>
+        <button type="button" value="add" id="btnClick" class="btn" onclick="tasks.add()">add</button>        
+        <button onclick="sortList()">Sort</button>
+        <ul id="ul"></ul>
+    </body>  
+</html>
