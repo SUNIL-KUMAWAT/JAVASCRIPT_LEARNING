@@ -1,0 +1,55 @@
+
+        .container {
+            background-color: aquamarine;
+            width: 30%;
+            float: left;
+        }
+
+        .tableClass {
+            float: left;
+            margin-left: 100px;
+        }
+
+        .deletebtn:hover {
+            color: rgb(223, 17, 17);
+            transition: 50ms;
+        }
+
+        .deletebtn {
+            background-color: rgb(69, 226, 231);
+        }
+
+        .updatebtn {
+            background-color: rgb(230, 141, 222);
+        }
+
+        .updatebtn:hover {
+            color: rgb(236, 215, 22);
+            transition: 50ms;
+        }
+
+        form {
+            width: 300px;
+            margin: 10px auto;
+        }
+
+        table {
+            float: right;
+            border-collapse: collapse;
+            text-align: center;        
+        }
+
+        table td,
+        table th {
+            border: solid 1px black;            
+        }
+        table th{
+            background-color: aqua;
+        }
+
+        label,
+        input {
+            display: block;
+            margin: 7px 0;
+            font-size: 20px;
+        }

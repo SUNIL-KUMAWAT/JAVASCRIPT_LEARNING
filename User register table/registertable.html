@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registertable.css">
+    <title>Dynamic Table</title>   
+</head>
+
+<body>
+    <div class="container">
+        <form name="form">
+            <label for="name">
+                Your Name:
+            </label>
+            <input type="text" id="name" name="name"><span id="nameloc"></span>
+            <label for="username">
+                Your Username:
+            </label>
+            <input type="text" id="username" name="username"><span id="usernameloc"></span>
+            <label for="email">
+                Email Address:
+            </label>
+            <input type="text" id="email"><span id="emailloc"></span>
+            <label for="number">
+                Mobile Number:
+            </label>
+            <input type="text" id="number" name="numuber" minlength="10" maxlength="10" required><span
+                id="numloc"></span>
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password"><span id="passwordloc"></span>
+            <input type="button" name="button" value="Register"
+                onclick=" var temp = validate();adddata(); return temp;" class="addbtn">
+            <!-- <input type="submit" name="fname" value="Register" onclick="addStudent();" class="addbtn"  onsubmit="return validate()"> -->
+        </form>
+    </div>
+    <div class="tableClass">
+        <input type="text" name="searchbar" id="search" placeholder="Search..." onkeyup="search()">
+        <table id="tbl" class="table" >
+            <thead>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th>Created</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+<script type="text/javascript" src="registertable.js">   
+</script>
+</html>
