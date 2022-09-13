@@ -1,0 +1,63 @@
+
+
+        .tableClass {
+            /* float: left; */
+            margin-left: 100px;
+            width: 70%;
+        }
+
+        .updatebtn:hover {
+            color: rgb(236, 215, 22);
+            transition: 50ms;
+        }
+        form {
+            width: 400px;
+            margin: 10px auto;
+            border: rgb(53, 18, 14) solid 2px;
+           padding-left: 40px;
+           background-color: #f3f3f3;
+        }
+        .table {
+            /* float: right; */
+            border-collapse: collapse;
+            text-align: center;  
+            width: 100%;
+        }
+        span{
+            color: rgb(245, 84, 92);            
+        }
+
+        table td,
+        table th {
+            border: solid 1px black;            
+        }
+        table th{
+            background-color: rgb(181, 209, 209);
+        }
+
+        label,
+        input {
+            display: block;
+            margin: 7px 0;
+            font-size: 22px;
+        }
+#js-search{
+    float: right;
+}
+.deleteButton{
+    background-color: rgb(252, 92, 92);
+}
+.editButton{
+    background-color: rgb(181, 114, 245);
+}
+.viewButton{
+    background-color: rgb(219, 118, 228);
+}
+.changeStatusButton{
+    background-color: rgb(170, 245, 127);
+}
+#add-button{
+background-color: rgb(68, 102, 196);
+width: 150px;
+color: white;
+}
