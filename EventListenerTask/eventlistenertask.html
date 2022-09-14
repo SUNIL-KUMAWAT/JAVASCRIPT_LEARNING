@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        background-color: aqua;
+        width: 300px;
+        height: 200px;
+    }
+
+    .redclass {
+        color: red;
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .green {
+        background-color: green;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+
+    .pink {
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <button id="red">red</button>
+        <button id="green">green</button>
+        <button id="yellow">yellow</button>
+        <button id="pink">pink</button>
+    </div>
+    <button id="button" type="button">Machine is on</button>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3
+            <ul>
+                <li>4</li>
+                <li>5</li>
+                <li>6
+                    <ul>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9
+                            <ul>
+                                <li>10</li>
+                                <li>11</li>
+                                <li>12</li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+<script>
+    let find = document.querySelectorAll("ul");
+    find.forEach((e) => {
+        console.log(e)
+        let findUl = e.querySelector("ul li:last-child");
+        console.log(findUl)
+        let button = findUl
+        button.addEventListener("click", function () {
+            findUlli = findUl.querySelector("li:first-child");
+            findUlli.classList.add('redclass');
+        })
+    })
+
+    let redColor = document.querySelector("#red");
+    let div = document.querySelector("#container");
+    redColor.addEventListener('click', function () {
+        div.classList.add('red');
+        div.classList.remove('green');
+        div.classList.remove('yellow');
+        div.classList.remove('pink');
+    })
+    let greenColor = document.querySelector("#green");
+    greenColor.addEventListener('click', function () {
+        div.classList.add('green');
+        div.classList.remove('red');
+        div.classList.remove('yellow');
+        div.classList.remove('pink');
+    })
+    let yellowColor = document.querySelector("#yellow");
+    yellowColor.addEventListener('click', function () {
+        div.classList.add('yellow');
+        div.classList.remove('red');
+        div.classList.remove('green');
+        div.classList.remove('pink');
+    })
+    let pinkColor = document.querySelector("#pink");
+    pinkColor.addEventListener('click', function () {
+        div.classList.add('pink');
+        div.classList.remove('green');
+        div.classList.remove('yellow');
+        div.classList.remove('red');
+    })
+
+    let buttonclick = document.querySelector("#button");
+    buttonclick.addEventListener('click', function () {
+        console.log(buttonclick.textContent);
+        if (buttonclick.textContent == "Machine is on") {
+            buttonclick.textContent = "Machine is off";
+        } else {
+            buttonclick.textContent = "Machine is on";
+        }
+    });
+</script>
+
+</html>
