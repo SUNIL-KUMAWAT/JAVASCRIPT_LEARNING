@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>onblur</p>
+    Name: <input type="text" name="fname" id="onblur" onblur="blurFunction()">
+    <br>
+    <br>
+    <p>onchange</p>
+    <select id="mySelect" onchange="changeFunction()">
+        <option value="first">first
+        <option value="second">second
+        <option value="third">third
+        <option value="fourth">fourth
+    </select>
+    <p id="onchange">onchange</p>
+    <br>
+    <br>
+    <p>oncontextmenu</p>
+    <p oncontextmenu="oncontextmenufunction()"> here.... right click for contextmenu</p>
+    <br>
+    <p>focus</p>
+    <input type="text" id="focus" onfocus="onfocusfunction()">
+    <br>
+    <br>
+    <p>onsubmit</p>
+    <form action="" onsubmit="onsubmitFunction()">
+        Enter name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+      </form>
+      <br>
+      <br>
+      <p>onselect</p>
+      Name: <input type="text" value="Select" onselect="onselectFunction()">
+      <p>onreset</p>
+      <form onreset="onresetFunction()">
+        Enter name: <input type="text">
+        <input type="reset">
+      </form>
+</body>
+
+<script>
+    function blurFunction() {
+        var fname = document.querySelector("#onblur");
+        //   console.log(fname.value);       
+        fname.classList.toggle('red');
+    }
+
+    function changeFunction() {
+        var select = document.getElementById("mySelect").value;
+        document.getElementById("onchange").innerHTML = select;
+    }
+
+    function oncontextmenufunction(){
+        alert("hello this is oncontextmenu ");
+    }
+
+    function onfocusfunction(){
+        let a = document.querySelector("#focus");
+        a.style.background = "red";
+    }  
+
+    function onsubmitFunction() {
+        alert("form submitted");
+    }
+
+    function onselectFunction() {
+        alert("selected text");
+    }
+
+    function onresetFunction() {
+        alert("form reset");
+   }
+</script>
+
+</html>
