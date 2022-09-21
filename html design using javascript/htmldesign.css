@@ -1,0 +1,630 @@
+body{
+    background-color: rgb(250, 248, 248);
+}
+.headerclass {
+    text-align: center;
+    background-color: black;
+    height: 50px;
+    padding-top: 20px;
+}
+.allProduct {
+    height: 32px;
+    width: 100px;
+    color: white;
+    background-color: rgb(90, 112, 238);
+    margin-left: 180px;
+    border-radius: 5px 0px 0px 5px;
+    border: 0px;
+}
+.search {
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    height: 30px;
+    width: 300px;
+    color: rgb(34, 24, 24);
+}
+.startSellingNow {
+    height: 30px;
+    float: right;
+    margin-right: 240px;
+    width: 140px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+.a1 {
+    width: 130px;
+    height: 130px;
+    margin: 15px;
+    margin-left: 50px;
+    border-radius: 1px;
+}
+.a2 {
+    width: 300px;
+    height: 357px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    float: right;
+}
+.div {
+    float: left;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+.div1 {
+    float: left;
+}
+img {
+    width: 130px;
+    height: 130px;
+}
+img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.fullimage {
+    width: 300px;
+    height: 420px;
+    border-radius: 5px;
+}
+.rightSideSection {
+    float: right;
+    background-color: red;
+    border: 1px solid black;
+}
+h1{
+    height: 20px;
+    margin-top: 2px;
+}
+.div2 {
+    float: right;
+    /* border: 1px solid black; */
+    height: 650px;
+    width: 460px;
+    margin-right: 180px;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+#colorred {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: rgb(226, 197, 65);
+    cursor: pointer;
+}
+#colorgreen {
+    background-color: green;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+#colorblack {
+    background-color: rgb(124, 112, 112);
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+#colorgray {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+.red {
+    border: 0;
+    border: 3px dotted red;
+}
+.green {
+    border: 0;
+    border: 3px dotted red;
+}
+.yellow {
+    border: 0;
+    border: 3px dotted red;
+}
+.pink {
+    border: 0;
+    border: 3px dotted red;
+}
+#storepicup {
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+#delivery {
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    cursor: pointer;
+}
+#output-area {
+    margin-top: 10px;
+    width: 100px;
+    height: 33px;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid rgb(243, 237, 237);
+}
+#increment {
+    width: 50px;
+    height: 35px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#decrement {
+    width: 50px;
+    height: 35px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+#deliverydesc {
+    color: solid black;
+    font-size: 21px;
+    margin-right: 10px
+}
+#networkLink {
+    font-size: 19px;
+    color: black;
+}
+#buyNow {
+    width: 160px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: rgb(133, 199, 236);
+    margin-right: 20px;
+    cursor: pointer;
+}
+#makeOffer {
+    width: 160px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: rgb(241, 171, 41);
+    cursor: pointer;
+}
+#hrtag{
+    margin-top: 750px;
+    height: 8px;
+    width: 100%;
+    background-color: rgb(228, 226, 226);
+    border: 0px;
+}
+.enterOffer {
+    width: 300px;
+    border-radius: 5px;
+    height: 25px;
+    cursor: pointer;
+}
+#storepicupBox {
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+#deliveryBox {
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    cursor: pointer;
+}
+#deliverydescBox {
+    color: solid black;
+    font-size: 18px;
+    margin-right: 10px
+}
+#spanbox {
+    font-size: 12px;
+}
+#online {
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+#payInPerson {
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    cursor: pointer;
+}
+.submitOffer {
+    width: 300px;
+    border-radius: 5px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: rgb(241, 171, 41);
+    cursor: pointer;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    padding-left: 200px;
+    left: 0;
+    top: 0;
+    width: 450px;
+    height: 510px;
+    overflow: auto;
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding-left: 30px;
+    border: 1px solid #888;
+    width: 340px;
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.7s
+}
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+.close {
+    float: right;
+    width: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    /* padding-right: 30px; */
+    cursor: pointer;
+    text-align: center;
+    margin-right: 35px;
+    border: rgb(243, 227, 227) solid 2px;
+    background-color: aliceblue;
+}
+.modal-header {
+    color: rgb(24, 2, 2);
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+#aboutproduct{
+    margin-left:160px ;
+}
+#sellerdetails {
+    width: 1000px;
+    height: 180px;
+    margin-left: 160px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px; 
+}
+#userimage {
+    border-radius: 80px;
+    width: 160px;
+    height: 160px;   
+}
+#userinfo1{
+    display: inline-block;
+  width: 100;
+  margin-left: 30px;
+  }
+  #userinfo2{
+    display: inline-block;
+  width: 200px;
+  margin-left: 30px;
+  margin-top: 30px; 
+  }
+  #userinfo3{
+    display: inline-block;
+    width: 100px;
+    margin-left: 10px;
+    text-align: center;  
+  }
+  #userinfo4{
+    display: inline-block;
+    margin-left: 20px;
+    width: 100px;
+    text-align: center;
+  }
+  #userinfo5{
+    display: inline-block;
+    height: 30px;
+    margin-left: 40px;   
+  }
+  #userinfo6{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+  }
+  #contact{
+    width: 100px;
+    height: 25px;
+    border-radius: 30px;
+    border-width: thin;
+  }
+  #visitstore{
+    width: 100px;
+    border-radius: 30px;
+    border-width: thin;
+    height: 25px;
+    cursor: pointer;
+  }
+.similaritemsDiv{
+    padding-left: 110px;
+    padding-right: 120px;   
+}
+
+.similar {
+    box-sizing: border-box;
+    box-shadow: 50px;
+    padding-left: 50px;
+    float: left;
+}
+.gallery {
+    background-color: rgba(248, 221, 221, 0.382);
+    box-shadow: 10px 8px 8px  rgb(221, 217, 217); 
+    margin-top: 25px;
+    border-radius: 10px 10px 0 0;
+}
+.gallery .similarImgage {
+    width: 225px;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+}
+.gallery .similarImgage:hover{
+    transform: scale(1.1);
+}
+.imageDescription{  
+    text-align: center;   
+}
+#similarItemh4{
+    height: 10px;
+}
+#fadeSmallText {
+    color: gray;
+}
+#locationimg{
+    width:12px;
+    height: 12px;
+}
+#viewSvg{
+    width:16px;
+    height: 12px;
+    padding-left: 45px;
+}
+.similar1 {
+
+    box-sizing: border-box;
+    box-shadow: 50px;
+    float: left;  
+}
+.gallery1 {
+    background-color: rgba(242, 239, 239, 0.382);
+}
+#fadesmallTexthead {
+    color: gray;
+}
+#locationimg1{
+    width:12px;
+    height: 12px;
+}
+#viewSvg1{
+    width:16px;
+    height: 12px;
+    padding-left: 5px;
+}
+.pricedesc{
+    color: rgb(55, 143, 243);
+    font-size: 18px;
+    text-align: left;
+    margin-left: 15px;
+   
+}
+.deliverylogo{
+    width:18px;
+    height: 18px;
+  padding-left: 125px;
+}
+#fadesmallText1 {
+    color: rgb(22, 169, 236);
+    display: block;
+    margin-left: 10px;
+}
+#footerLeftBox1img1{
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+}
+#footerLeftBox1img2{
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+}
+.contentfooter{
+    background-color: aqua;
+    width: 1050px;
+    height: 300px;
+}
+#hrtag1{
+    margin-top: 900px;
+    height: 8px;
+    width: 100%;
+    background-color: rgb(228, 226, 226);
+    border: 0px;
+}
+.footerLeftBox3{
+    width: 100%;
+}
+.left_box{
+    display: flex;
+}
+h3_1{
+    font-size: 2px;
+}
+p_1{
+    font-size: 2px;
+}
+footer{
+    width: 100%px;  
+   height: 320px;
+    margin-top: 50px;
+    background: rgb(29, 28, 28);
+   border-radius: 5px;
+  }
+  .footercontent{
+    max-width: 1350px;
+    color: rgb(216, 197, 197);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+  }
+ 
+  footer .footercontent .topic:hover{
+    color: rgb(248, 203, 144);
+    cursor: pointer;
+  }
+  footer .footercontent .topic{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-top: 15px;
+  } 
+  .left_box{
+    width: 200px;
+    display: block;
+    margin-top: 20px;
+    margin-right: 300px;
+  }
+  .middlebox{
+    width: 200px;
+    display: block;
+    margin-top: 20px;
+    margin-right: 50px;
+  }
+  .rightbox{
+    width: 200px;
+    display: block;
+    margin-right: 100px;
+    margin-top: 20px;
+  }
+  .left_box div{
+    margin-top: 15px; 
+  }
+  .rightbox p{
+   font-size: 14px;  
+  }
+  .middlebox div{
+    margin-bottom: 10px;
+  }
+  .rightbox div{
+    margin-bottom: 10px;
+  }
+  .middlebox p{
+    font-size: 14px;
+  }
+  .middlebox p:hover{
+    color:white;
+    cursor: pointer;
+  }
+  .rightbox p:hover{
+    color:white;
+    cursor: pointer;
+  }
+  .left_box div p{
+    font-size: 12px;
+    margin: 0;
+  }
+  .footerleftlogo{
+    margin-top: 35px;
+    margin-left: 200px;
+  }
+  .footerlogo1{
+    width: 40px;
+    height: 50px;
+  }
+  .footerlogo2{
+    width: 40px;
+    height: 50px;
+  }
+  .footerlogo3{
+    width: 40px;
+    height: 50px;
+  }
+  #footerLeftimg1{
+    width: 40px;
+    height: 35px;
+    background-color: antiquewhite;
+    border-radius: 40%;
+  }
+  #footerLeftimg2{
+    width: 40px;
+    height: 35px;;
+    background-color: antiquewhite;
+    border-radius: 40%;
+  }
+  #footerLeftimg3{
+    width: 40px;
+    height: 35px;
+    background-color: antiquewhite;
+    border-radius: 40%;
+  }
+.copyright{
+    display: flex;
+    background-color:rgb(219, 212, 212);
+    height: 50px;
+
+}
+.copyrightContent{
+    margin-top: 15px;
+    color: rgb(12, 12, 12);
+    margin-left: 100px;
+}
+.copyrightlogo{
+    display: flex;
+    margin-left: 660px;
+    margin-top: 5px;
+}
+  .facebookImageLogo{
+    width: 40px;
+    height: 35px;
+    border-radius: 40%;
+  }
+  .instagramImageLogo{
+    width: 40px;
+    height: 35px;
+    border-radius: 40%;
+  }
+  .twitterImageLogo{
+    width: 40px;
+    height: 35px;
+    border-radius: 40%;
+  }
