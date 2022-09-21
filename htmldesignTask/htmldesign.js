@@ -538,11 +538,14 @@ imageGellery.forEach(function (element) {
         let tempImg =  similarImg.src;
         imagefourth.src = similarImg.src;
     imagefourth.src = tempImg; 
-    console.log(currentViews);
-    currentViews = element.view;
-    console.log(currentViews);
+   
     })
 
+        similarImg.addEventListener('click', function () {
+        console.log(currentViews);
+        price.textContent = '$' + element.price;
+        console.log(currentViews);
+    })
     similarImg.addEventListener('click', () => window.scrollTo({
         top: 10,
         behavior: 'smooth',
